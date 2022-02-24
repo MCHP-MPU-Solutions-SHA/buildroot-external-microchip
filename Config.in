@@ -21,7 +21,6 @@ menu "Microchip CryptoAuth"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/cryptoauthlib/Config.in"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/python-cryptoauthlib/Config.in"
 endmenu
-source "$BR2_EXTERNAL_MCHP_PATH/package/greengrass-core/Config.in"
 
 menu "EGT Applications"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/egt/Config.in"
@@ -29,13 +28,17 @@ menu "EGT Applications"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/egt-launcher/Config.in"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/egt-thermostat/Config.in"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/egt-samples/Config.in"
+	source "$BR2_EXTERNAL_MCHP_PATH/package/egt-samples-contribution/Config.in"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/egt-media/Config.in"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/egt-media-extra/Config.in"
 endmenu
 
 menu "Fonts"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/noto-fonts/Config.in"
+	source "$BR2_EXTERNAL_MCHP_PATH/package/lohit-fonts/Config.in"
 endmenu
 
 source "$BR2_EXTERNAL_MCHP_PATH/system/Config.in"
 source "$BR2_EXTERNAL_MCHP_PATH/package/libosmscout/Config.in"
+
+source "$BR2_EXTERNAL_MCHP_PATH/package/video-capture-at91/Config.in"
