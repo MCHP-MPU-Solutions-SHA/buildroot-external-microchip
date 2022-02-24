@@ -16,6 +16,9 @@ menu "WILC BT and WiFi Applications"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/wilcbtapps/Config.in"
 endmenu
 
+menu ".NET framework"
+	source "$BR2_EXTERNAL_MCHP_PATH/package/dotnet-runtime/Config.in"
+endmenu
 
 menu "Microchip CryptoAuth"
 	source "$BR2_EXTERNAL_MCHP_PATH/package/cryptoauthlib/Config.in"
