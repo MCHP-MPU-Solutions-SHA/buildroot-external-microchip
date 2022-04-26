@@ -1,0 +1,12 @@
+sam-ba -p usb -b sam9x60-ek -a nandflash:1:8:0xc0c00405 -c erase
+sam-ba -p usb -b sam9x60-ek -a nandflash:1:8:0xc0c00405 -c writeboot:at91bootstrap.bin
+sam-ba -p usb -b sam9x60-ek -a nandflash:1:8:0xc0c00405 -c write:u-boot.bin:0x40000
+sam-ba -p usb -b sam9x60-ek -a nandflash:1:8:0xc0c00405 -c write:at91-sam9x60eknf.dtb:0x180000
+sam-ba -p usb -b sam9x60-ek -a nandflash:1:8:0xc0c00405 -c write:zImage:0x200000
+sam-ba -p usb -b sam9x60-ek -a nandflash:1:8:0xc0c00405 -c write:rootfs.ubi:0x800000
+sam-ba -p usb -b sam9x60-ek -a bootconfig -c writecfg:bscr:EMULATION_ENABLED
+sam-ba -p usb -b sam9x60-ek -a bootconfig -c resetemul
+sam-ba -p usb -b sam9x60-ek -a bootconfig -c refreshcfg:emul
+sam-ba -p usb -b sam9x60-ek -a bootconfig -c refreshcfg:emul
+sam-ba -p usb -b sam9x60-ek -a bootconfig -c writecfg:bcp-emul:NFC_IOSET1
+sam-ba -p usb -b sam9x60-ek -a bootconfig -c lockcfg:bcp-emul

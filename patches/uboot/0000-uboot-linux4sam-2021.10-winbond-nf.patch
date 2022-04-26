@@ -1,0 +1,22 @@
+diff --git a/configs/sam9x60ek_nandflash_defconfig b/configs/sam9x60ek_nandflash_defconfig
+index 42d3761701..894c12cc50 100644
+--- a/configs/sam9x60ek_nandflash_defconfig
++++ b/configs/sam9x60ek_nandflash_defconfig
+@@ -15,7 +15,7 @@ CONFIG_FIT=y
+ CONFIG_NAND_BOOT=y
+ CONFIG_BOOTDELAY=3
+ CONFIG_USE_BOOTARGS=y
+-CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk mtdparts=atmel_nand:256k(bootstrap)ro,768k(uboot)ro,256k(env_redundant),256k(env),512k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ubifs ubi.mtd=12 root=ubi0:rootfs rw"
++CONFIG_BOOTARGS="console=ttyS0,115200 earlyprintk root=ubi0:rootfs rootfstype=ubifs ubi.mtd=10 ubi.fm_autoconvert=1 rootwait rw"
+ CONFIG_SYS_CONSOLE_IS_IN_ENV=y
+ # CONFIG_DISPLAY_BOARDINFO is not set
+ CONFIG_MISC_INIT_R=y
+@@ -60,7 +60,7 @@ CONFIG_MTD=y
+ # CONFIG_SYS_NAND_USE_FLASH_BBT is not set
+ CONFIG_NAND_ATMEL=y
+ CONFIG_ATMEL_NAND_HW_PMECC=y
+-CONFIG_PMECC_CAP=8
++CONFIG_PMECC_CAP=2
+ CONFIG_PHY_MICREL=y
+ CONFIG_DM_ETH=y
+ CONFIG_MACB=y

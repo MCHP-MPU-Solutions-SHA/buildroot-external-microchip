@@ -1,0 +1,14 @@
+diff --git a/configs/sam9x60eknf_uboot_defconfig b/configs/sam9x60eknf_uboot_defconfig
+index b82c41dd..633819b3 100644
+--- a/configs/sam9x60eknf_uboot_defconfig
++++ b/configs/sam9x60eknf_uboot_defconfig
+@@ -5,7 +5,8 @@
+ CONFIG_SAM9X60=y
+ CONFIG_NANDFLASH=y
+ # CONFIG_PMECC_AUTO_DETECT is not set
+-CONFIG_PMECC_CORRECT_BITS_8=y
++#CONFIG_PMECC_CORRECT_BITS_8=y
++CONFIG_PMECC_CORRECT_BITS_2=y
+ CONFIG_IMG_SIZE="0x000c0000"
+ CONFIG_DEBUG=y
+ CONFIG_THUMB=y
